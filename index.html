@@ -1,0 +1,329 @@
+<!doctype html>
+
+<html>
+	
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Big Ant Breakdowns | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar which disappears on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon - images are in a folder called 'fav'-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img/logo.jpg" width="125" height="100" alt=""/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+	   <li>
+          <a href="#gal">Spring Practice</a>
+		  </li>
+	  	<li>
+          <a href="#tl">Fans</a>
+        </li>
+        <li>
+          <a href="#vid">Madden Center</a>
+			</li>
+      <li>
+          <a href="#num">Cal Poly History</a>
+			</li>
+      <li>
+          <a href="#num2">NFL</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container">
+</div>
+<!--animated welcome-->
+<div class="wrapper">
+<!--animated welcome code here-->	
+</div>
+    
+<!--beginning of main content area-->
+<div class="row whiteBG">
+<h2 id="home">Welcome to Big Ant Breakdowns</h2>
+<article>
+<p class="tab">Big Ant Breakdowns is your go to place for anything Central Coast football. From Cal Poly to the NFL, we have you covered with up to date news and analysis<br><br></p>
+<p class="tab"><a href="#gal">Get Started</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+<h2 id="gal">Cal Poly Prepares for 2023 Season</h2>
+<article><!--beginning of article-->
+<p class="tab">Cal Poly football held their first spring scrimmage of the year on April 22nd. It was their first instance of "Live Play" since the fall, and the mustangs are looking to come out of the gates strong after a dissapointing 2 and 9 record last season. In the offseason, the mustangs moved on from head coach Beau Baldwin and promoted offensive line coach Paul Wulff to be his replacement. Wulff has coached at the collegiate level for 28 years, with 12 of those coming as a head coach. He has hopes of rebuilding Cal Poly's program that has struggled the past couple years, and bring them back to glory.</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="April 22nd at Spanos Stadium- The Cal Poly mustangs prepare to take the field for the first scrimmage of the season"/>
+<img src="img/2.jpg" width="100%" height="100%" alt="Freshman Julius Jordan says the team is 'Excited to show how hard we’ve been working and compete'"/>
+<img src="img/3.jpg" width="100%" height="100%" alt="The action begins with 7 on 7, no lineman and only skill position players. Redshirt freshman Bo Kelly shows an ability to throw accurately while on the run."/>
+<img src="img/4.jpg" width="100%" height="100%" alt="After the 7 on 7, the team carried out live special teams drills. Senior Bryson Allen and freshman Delano Franklin compete for the job of team punt returner, and wait for the drill to begin. "/>
+<img src="img/5.jpg" width="100%" height="100%" alt="The team then transitions into live in-game 11 on 11 action, offense vs. defense. Sophomore Logan Booher begins the day by attempting to haul in a one handed catch over freshman Boston Wilson."/>
+<img src="img/6.jpg" width="100%" height="100%" alt="The defense held the offense at bay for most of the day, and the first splash play comes from redshirt junior Jeremy Justice. He intercepts a pass and gives the defense a spark of energy."/>
+<img src="img/7.jpg" width="100%" height="100%" alt="After the play, Justice stated, “When I go out there, my main goal is to make plays for my teammates”."/>
+<img src="img/8.jpg" width="100%" height="100%" alt="The offense moves down the field steadily and finds themselves on the goal line for the last drive of the scrimmage."/>
+<img src="img/9.jpg" width="100%" height="100%" alt="Senior Mark Biggins is given the ball, and he chops his feet to cross the plane and score a touchdown for the offense."/>
+<img src="img/10.jpg" width="100%" height="100%" alt="Biggins is lifted up in celebration by his teammates, and ends the scrimmage on a positive note for the offense. 
+"/>
+<img src="img/11.jpg" width="100%" height="100%" alt="“We’re just trying to get better everyday, and I think that we got better today” Defensive Quality Control Coach Matthew Hazelwood said after the day was completed."/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">Next</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">Favorite Teams Around Campus</h2>
+<article>
+  <p class="tab">Cal Poly students tell us their favorite NFL teams, and what caused them to become fans.
+      Click on images to hear ...<br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.m4a" type="audio/mpeg" />
+</audio>        
+<audio id="audio_2">
+    <source src="audio/2.m4a" type="audio/mpeg" />
+</audio>        
+<audio id="audio_3">
+	<source src="audio/3.m4a" type="audio/mpeg" />
+</audio>
+        
+<img src="img/rollover/1.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/1.jpg'" onMouseOut="this.src='img/rollover/1.gif'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/2.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.jpg'" onMouseOut="this.src='img/rollover/2.gif'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/3.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/3.jpg'" onMouseOut="this.src='img/rollover/3.gif'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+</div>
+<p class="tab"><a href="#vid">Next</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+<!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.jpg">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">Cal Poly Breaks The Ground on New John Madden Football Center</h2>
+<article>
+<p class="tab">On April 29th, Cal Poly officially broke the ground for the New John Madden Football Center. During the ceremony, Cal Poly President Jeffrey Armstrong announched that the 30 million dollar facility is set to be completetd by fall of 2024. The facility will include a locker room, hall of champions, strength and conditioning facilities, coach's offices, and more. The building itself is named after infamous Cal Poly alumni John Madden, who sadly passed away in December of 2021. The new facility is being built adjacent to Mustang Memorial Plaza, a tribute to the 16 Cal Poly football players and team manager who tragically passed away in a 1960 plane crash. The plaza was very special to Madden because many of his friends and temmates lost their lives in the crash, and it is only fitting that a facility in his name is being built right next to a place so special to him. </p>	
+<video width="100%" height="100%" poster="img/poster.png" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">Next</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of infographic section-->
+ <h2 id="num"></h2>
+    <div class="piktowrapper-embed" data-uid="1dca02cb26bc-management-styles">
+    <h2 id="num"></h2></div><script>(function(d){var js, id="pikto-embed-js", ref=d.getElementsByTagName("script")[0];if (d.getElementById(id)) { return;}js=d.createElement("script"); js.id=id; js.async=true;js.src="https://create.piktochart.com/assets/embedding/embed.js";ref.parentNode.insertBefore(js, ref);}(document));</script>
+<div class="row whiteBG">
+<h2 id="num2">How Far Are NFL Teams From SLO?</h2>
+<article>
+<p class="tab">How far is your favorite team from San Luis Obispo? Here we take a look into the distance to the stadiums of 15 different NFL teams</p>
+<div class="infogram-embed" data-id="21ab7584-215e-4b64-8df8-fce5e86c2e81" data-type="interactive" data-title="Team Distance"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><br></div>
+<!--infographic embed code here-->
+</article>
+</div>
+<!--end of infographic section-->
+	
+<!--beginning of footer-->
+<footer>Big Ant Breakdowns | San Luis Obispo, CA | <a href="mailto: anthonymolleson@gmail.com Subject=Inquiry" target="_top">Send Email</a> | Copyright 20__ | Site by You 
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
